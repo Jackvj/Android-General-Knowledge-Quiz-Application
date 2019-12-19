@@ -1,0 +1,43 @@
+<resources>
+    <!-- The name of the application -->
+    <string name="app_name">General Knowledge Quiz</string>
+
+    <!-- The toast messages that will get displayed to the user -->
+    <string name="correct_text">Correct</string>
+    <string name="incorrect_text">Incorrect</string>
+    <string name="first_score_text">0/10</string>
+    <string name="correct_toast_message">Good Job!</string>
+    <string name="incorrect_toast_message">Not Good</string>
+
+    <!-- Round 1 Questions - EASY -->
+    <string name="Q1">Jesus was Born on the 25th December</string>
+    <string name="Q2">B in BIDMAS stands for Brackets</string>
+    <string name="Q3">2x=8, x is 2</string>
+    <string name="Q4">An object is an instance of a class in Java</string>
+    <string name="Q5">An Array is similar to a class in Java</string>
+
+    <!-- Round 2 Questions - MEDIUM -->
+    <string name="Q6">World War 2 started in 1939 and ended in 1949</string>
+    <string name="Q7">Tesla Model 3 costs £60K+</string>
+    <string name="Q8">The Capital of Malaysia is Bangkok</string>
+    <string name="Q9">The Capital of Greece is Athens</string>
+    <string name="Q10">Ubiquitous means to be everywhere at once</string>
+
+    <!-- Round 3 Questions - HARD -->
+    <string name="Q11">The derivative of 10(x) is 10</string>
+    <string name="Q12">The Integral of 2x^5 is 1/3(x)^6</string>
+    <string name="Q13">Barack Obama was the President from 2009-2013</string>
+    <string name="Q14">Tesla Model X P100d is the mostly sold Tesla in 2019</string>
+    <string name="Q15">Germany won the 2014 World Cup by beating Brazil 7-1</string>
+
+
+    <!-- Strings for the prizes that the user can choose if the score is 15/15 (may be implemented later).. pending -->
+
+    <string name="prizes_to_win"></string>
+    <string name="Prize1">£5.00</string>
+    <string name="Prize2">£20 Amazon Voucher</string>
+    <string name="Prize3">1 Month Free Gym Pass</string>
+    <string name="Prize4">Starbucks Voucher</string>
+    <string name="Prize5">3 Apples</string>
+
+</resources>
