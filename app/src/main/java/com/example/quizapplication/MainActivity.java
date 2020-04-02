@@ -2,12 +2,10 @@ package com.example.quizapplication;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -16,7 +14,6 @@ import android.widget.Toast;
 // Purpose of MainActivity.java: Contains the code for the quiz application UI.
 // Author: Sabin Constantin Lungu
 // Date of Last Modified: 19 December 2019
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             new QuizModel(R.string.Q15, true)
     };
 
-
     final int USER_PROGRESS = (int)Math.ceil(100.0 / questionBank.length); // User progress bar formula
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,18 +77,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(view.getId() == R.id.trueBtn) { // If the true button is clicked
 
-                    verifyUserAnswer(true); // Verify the user answer
-                  changeQuestionBtnClick();
+                  verifyUserAnswer(true); // Verify the user answer
+                  changeQuestionBtnClick(); // After verifying the answer, change the question.
                 }
             }
         });
 
-
         falseButton.setOnClickListener(new View.OnClickListener() { // Create an on click listener for the false button
 
             public void onClick(View view) {
+                
                 if(view.getId() == R.id.falseBtn) { // If the false button is clicked
-                    verifyUserAnswer(false); // 1. First Verify the user answer
+                verifyUserAnswer(false); // 1. First Verify the user answer
                 changeQuestionBtnClick(); // 2. Change the question
                 }
             }
@@ -109,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         boolean gameOver;
 
         this.questionIndex = (questionIndex +1) % 15;
-
 
         if(score == 5) { // END OF ROUND EASY ROUND 1
             AlertDialog.Builder mediumRoundAlert = new AlertDialog.Builder(this);
@@ -134,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
             hardRoundAlert.setCancelable(true);
             hardRoundAlert.setTitle(hardTitle);
             hardRoundAlert.setMessage("Your score is 10. Hard Round Next" + this.score);
-
 
             hardRoundAlert.setPositiveButton("Proceed to Hard Round", new DialogInterface.OnClickListener() {
 
@@ -178,12 +172,10 @@ public class MainActivity extends AppCompatActivity {
         questionView1.setText(this.quizQuestion);
         this.quizProgressBar.incrementProgressBy(USER_PROGRESS); // Increment the progress bar by a value of 10.
         this.scoreTextView.setText("Score : " + score);
-
     }
 
     private void verifyUserAnswer(boolean userGuess) {
        boolean currentQuestionAnswer = questionBank[questionIndex].isUserAnswer();
-
 
        if(currentQuestionAnswer == userGuess) { // If the correct question is guessed by the user
 
